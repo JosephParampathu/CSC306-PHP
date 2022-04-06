@@ -1,0 +1,149 @@
+body {
+	background-color: #FFFFFF;
+	background-image: url(background.gif);
+	color: #0000FF;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+#container { margin-left: auto;    
+       margin-right: auto;
+       width:85%;
+       min-width:700px;
+      }
+
+
+#logo {
+	text-align:center;
+	margin: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 30px;
+	padding-bottom: 20px;
+
+}
+#nav {
+	float: left;
+	width: 200px;
+	padding-top: 10px;
+	text-align:left;
+	color: #FF0000;
+	font-size: 14px;
+}
+#nav a {
+	text-decoration:none;
+	margin: 15px;
+	display: block;
+	color: #FF0000;
+	font-size: 14px;
+	font-weight: bold;
+}
+#content {
+	margin-left: 150px;
+	padding: 30px;
+	overflow:auto;
+	border: medium groove #0000FF;
+	line-height: 135%;
+	
+}
+
+.floatright {padding-left:20px;
+             float:right;
+			 }
+.floatleft {
+	float:left;
+	padding: 2px 30px 20px;
+}
+#footer {
+	font-size: 16px;
+	font-style: normal;
+	text-align: justify;
+	border-top: thin none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #FF0000;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+h2 { text-transform: uppercase;
+     color: #0000FF;
+     font-size: 36px;
+     border-bottom: 1px none;
+     margin-right: 20px;
+}
+h3 {
+	color: #0000FF;
+	border-bottom: thin none;
+	margin-right: auto;
+	text-align: left;
+	padding-top: 20px;
+	padding-right: 100px;
+	padding-bottom: 20px;
+	padding-left: 100px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+}
+.details { padding-left:20%;
+           padding-right:20%; 
+}
+
+
+img {border:0 none; }
+
+           
+.content {
+	margin: 20px;
+	padding: 20px;
+}
+a {
+	color: #FF0000;
+	text-decoration: none;
+	margin: 15px;
+	color: #FF0000;
+	font-size: 14px;
+	font-weight: bold;
+}
+a:hover {
+	color: #FFFF00;
+	background-color: #0000FF;
+}
+h4 {
+	line-height: 150%;
+	margin-right: 20%;
+	margin-left: 15%;
+	text-align: center;
+}
+h1 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size: 36pt;
+	text-align: center;
+	margin-right: 15%;
+	margin-left: 20%;
+}
+p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 120%;
+	font-weight: bold;
+	color: #0000FF;
+}
+td {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 120%;
+	font-weight: bold;
+	color: #0000FF;
+}
+.flt_img {
+	float: none;
+	padding-top: 3px;
+	padding-right: 20px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+}
+specialh4 {
+	line-height: 150%;
+	margin-right: 20%;
+	margin-left: 15%;
+	text-align: center;
+}

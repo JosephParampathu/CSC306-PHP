@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Your Next Favorite Book!</title>
+<!--Includes the css file-->
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<script>
+function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("search").innerHTML="";
+//    document.getElementById("search").style.border="0px";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("search").innerHTML=this.responseText;
+    }
+  }
+  //This sends the user information to the php file as the value "q"
+  xmlhttp.open("GET","title_hints.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+<!--This is the form to enter the search query-->
+<form>
+  <h3>Search Book Titles to get Suggestions!</h3>
+<input type="text" size="30" onkeyup="showResult(this.value)">
+<h3><span id="search"></span></h3>
+</form>
+
+</body>
+</html>

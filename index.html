@@ -1,0 +1,37 @@
+<!--This webpage is used to enter search terms to query our array
+It gives suggestions as the user looks for book ttiles in our array
+-->
+<html>
+<head>
+<!--This is the webpage title-->
+<title>Search Query Page</title>
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<script language="Javascript" type="text/Javascript">
+function showHint(str)
+{
+  //Returns nothing when nothing is in the search field
+  if(str.length== 0)
+  {
+    document.getElementbyId("txtHint").innerHTML="";
+    return;
+  }
+  //checks the Browser type
+  if (window.XMLHttpRequest)
+  {var xmlhttp = new XMLHttpRequest();}
+  else
+  {var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");}
+  xmlhttp.onreadystatechange = function()
+  {
+    if (xmlhtml.readystate == 4 && xmlhttp.status == 200)
+    {
+      document.getElementbyId("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","hints.php?q="+str.true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+</body>
+</html>

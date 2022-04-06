@@ -1,0 +1,45 @@
+//// -- Database for holding doctors office information
+
+// The First table holds patient information to identify each patient
+Table patients as U {
+  id int [pk, increment] // auto-increment
+  full_name varchar
+  created_at timestamp
+  address varchar
+  age varchar
+  gender varchar
+  marital varchar
+}
+
+
+//----------------------------------------------//
+
+//// -- The next table holds medication information for whenever the office dispenses medication
+
+Table medications {
+  id int [pk] // primary key
+  patient_id int [not null, unique]
+  medication_name varchar
+  dispensed_at varchar [note: 'When order dispensed']
+  dispensed_quantity varchar
+}
+
+//This connects the field in the medications table to the patients table
+Ref: medications.patient_id > patients.id
+
+//----------------------------------------------//
+
+//// -- This table holds the billing information
+
+Table billing {
+  id int [pk]
+  patient_id int [not null]
+  amount_billed double
+  amount_paid double
+  paid_at datetime
+  insurance_id_number int
+  insurance_provider varchar
+}
+
+//This reference connects the patient_id in the billing table to the appropriate patient id in the patients table
+Ref: billing.patient_id > patients.id

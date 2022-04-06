@@ -1,0 +1,23 @@
+
+  <string-array name="titles">
+  <item><title>Oblomov</title></item>
+  <item><title>Anna Karenina</title></item>
+  <item><title>Of Mice and Men</title></item>
+  <item><title>Through the Looking Glass</title></item>
+  <item><title>Frankenstein</title></item>
+  <item><title>The Picture of Dorian Gray</title></item>
+  <item><title>Crime and Punishment</title></item>
+  <item><title>The Count of Monte Cristo</title></item>
+  <item><title>Confessions</title></item>
+  <item><title>Pride and Prejudice</title></item>
+  <item><title>Farenheit 451</title></item>
+  <item><title>Animal Farm</title></item>
+  <item><title>1984</title></item>
+  <item><title>Next of Kin</title></item>
+  <item><title>Lady of the Flowers</title></item>
+  <item><title>The Bible</title></item>
+  <item><title>Anarchy, the State, and Utopia</title></item>
+  <item><title>Les Miserables</title></item>
+  <item><title>Today's Gourmet</title></item>
+  <item><title>The Origin of Species</title></item>
+  </string-array>

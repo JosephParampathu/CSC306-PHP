@@ -1,0 +1,48 @@
+<!--This webpage is used to enter search terms to query our array
+It gives suggestions as the user looks for book ttiles in our array
+-->
+<html>
+<head>
+<!--This is the webpage title-->
+<title>Search Query Page</title>
+<!--Include the css file-->
+<link href="carla.css" rel="stylesheet" type="text/css" />
+<script language="Javascript" type="text/Javascript">
+function showHint(str)
+{
+  //Returns nothing when nothing is in the search field
+  if(str.length == 0)
+  {
+    document.getElementbyId("txtHint").innerHTML="";
+    return;
+  }
+  //checks the Browser type
+  if (window.XMLHttpRequest)
+  {var xmlhttp = new XMLHttpRequest();} //For most modern browsers this will work to connect the web page to php script
+  else
+  {var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");} //For older browsers this will work to connect the web page to php script
+  xmlhttp.onreadystatechange = function()
+  {
+    if (xmlhtml.readystate == 4 && xmlhttp.status == 200)
+    {
+      document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","hints.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+  <!--This is the div element that holds our main content-->
+<div id="content">
+<h3>Enter the search query here to see which book titles match!</h3>
+<!--This is the form that holds our search entries-->
+<form>
+<h3>First word: <input type="text" onkeyup="showHint(this.value)" /></h3>
+</form>
+<!--This is where the search suggestions are displayed-->
+<h3>Search Suggestions: <span id="txtHint"></span></h3>
+</div>
+</body>
+</html>
